@@ -11,7 +11,7 @@ def check_events(ai_settings, screen, stats, sb, play_button, ship, aliens, bull
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             high_score_file = open(".high_score.txt", 'w')
-            high_score_file.write(stats.high_score)
+            high_score_file.write(str(stats.high_score))
             sys.exit()
         elif event.type == pygame.KEYDOWN:
             check_keydown_events(event, ai_settings, screen, stats, sb, ship, aliens, bullets)
